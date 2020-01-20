@@ -1,0 +1,9 @@
+<h1>Questions</h1><div>Add Vote</div>
+
+{% if questions %}
+	{% for question in questions %}
+		<h3><a href="/polls/{{ question.id }}/">{{question.id}}: {{question.question_text}}</a></h3>
+	{% endfor%}
+{% else %}
+	<h1>No data</h1>
+{% endif %}
