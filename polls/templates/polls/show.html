@@ -6,3 +6,5 @@
 {% for choice in question.choice_set.all %}
 	<p>{{choice.choice_text}}: {{choice.votes}}</p>
 {% endfor %}
+
+<a href="{% url 'vote' question.id %}">Cast Your Vote Here</a>
